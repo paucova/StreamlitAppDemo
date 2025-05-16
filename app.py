@@ -1,12 +1,13 @@
 import streamlit as st
 from PIL import Image
 import numpy as np
-from tensorflow.keras.applications import MobileNetV2
+from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input, decode_predictions
 
+
 # Pre trained model
-model = MobileNetV2(weights="imagenet")
+model = load_model("my_model.keras")
 
 # Ui - i got this from internet
 st.title("Image Classification with MobileNetV2")
