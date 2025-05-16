@@ -30,5 +30,5 @@ if uploaded_file is not None:
     decoded_predictions = [(class_names[i], float(prediction[0][i])) for i in top_indices]
     
     st.subheader("Top Predictions:")
-    for i, (imagenet_id, label, score) in enumerate(decoded_predictions):
+    for label, score in decoded_predictions:
         st.write(f"**{label}**: {score*100:.2f}%")
