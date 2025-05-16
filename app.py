@@ -10,7 +10,7 @@ from tensorflow.keras.applications.mobilenet_v2 import preprocess_input, decode_
 model = load_model("my_model.keras")
 
 # Ui - i got this from internet
-st.title("Image Classification with MobileNetV2")
+st.title("Image Classification with Saul's model")
 uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
